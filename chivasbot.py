@@ -24,7 +24,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" Chivas Bot
+helpMessage =""" ACID TEAM BOT
 [Id︎]
 [Mid]
 [Me︎]
@@ -204,14 +204,14 @@ def bot(op):
             if mid in op.param3:
                 G = cl.getGroup(op.param1)
                 if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
+                    if wait["autoCancel"]["on"] == True:✔
                         if len(G.members) <= wait["autoCancel"]["members"]:
                             cl.rejectGroupInvitation(op.param1)
                         else:
                             cl.acceptGroupInvitation(op.param1)
                     else:
                         cl.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == True:
+                elif wait["autoCancel"]["on"] == True:✔
                     if len(G.members) <= wait["autoCancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
@@ -251,7 +251,7 @@ def bot(op):
                     kk.acceptGroupInvitationByTicket(op.param1,Ti)
                     kc.acceptGroupInvitationByTicket(op.param1,Ti)
                     X = cl.getGroup(op.param1)
-                    X.preventJoinByTicket = True
+                    X.preventJoinByTicket = True✔
                     cl.updateGroup(X)
                     Ti = cl.reissueGroupTicket(op.param1)
                     if op.param2 in wait["blacklist"]:
@@ -259,7 +259,7 @@ def bot(op):
                     if op.param2 in wait["whitelist"]:
                         pass
                     else:
-                        wait["blacklist"][op.param2] = True
+                        wait["blacklist"][op.param2] = True✔
 
                 if Amid in op.param3:
                     if op.param2 in Bots:
@@ -280,7 +280,7 @@ def bot(op):
                             wait["blacklist"][op.param2] = True
 
                     X = kk.getGroup(op.param1)
-                    X.preventJoinByTicket = False
+                    X.preventJoinByTicket = False❌
                     cl.updateGroup(X)
                     Ti = kk.reissueGroupTicket(op.param1)
                     cl.acceptGroupInvitationByTicket(op.param1,Ti)
@@ -312,10 +312,10 @@ def bot(op):
                         if op.param2 in wait["whitelist"]:
                             pass
                         else:
-                            wait["blacklist"][op.param2] = True
+                            wait["blacklist"][op.param2] = True✔
 
                     X = kc.getGroup(op.param1)
-                    X.preventJoinByTicket = False
+                    X.preventJoinByTicket = False❌
                     kc.updateGroup(X)
                     Ti = kc.reissueGroupTicket(op.param1)
                     cl.acceptGroupInvitationByTicket(op.param1,Ti)
